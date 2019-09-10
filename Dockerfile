@@ -30,6 +30,13 @@ RUN apt-get update \
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - \
     && apt-get update && apt-get install -y google-cloud-sdk \
 #
+# Install Docker CLI
+    && apt-get install -y apt-transport-https ca-certificates curl software-properties-common \
+    && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
+    && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" \
+    && apt update \
+    && apt install -y docker-ce \
+#
 # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
