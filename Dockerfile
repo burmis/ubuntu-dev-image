@@ -18,6 +18,7 @@ RUN apt-get update \
       libffi-dev \
       libgdbm-dev \
       liblzma-dev \
+      libpq-dev \
       libncurses5-dev \
       libreadline-dev \
       libsigsegv2 \
