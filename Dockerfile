@@ -3,13 +3,29 @@ FROM ubuntu:latest
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
+      autoconf \
+      automake \
+      autotools-dev \
       build-essential \
+      bison \
       curl \
       dnsutils \
       git \
+      gnupg2 \
       iputils-ping \
       iputils-tracepath \
+      libbison-dev \
+      libffi-dev \
+      libgdbm-dev \
       liblzma-dev \
+      libncurses5-dev \
+      libreadline-dev \
+      libsigsegv2 \
+      libssl-dev \
+      libtinfo-dev \
+      libyaml-0-2 \
+      libyaml-dev \
+      m4 \
       mysql-client \
       net-tools \
       patch \
@@ -44,6 +60,13 @@ RUN apt-get update \
     && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" \
     && apt update \
     && apt install -y docker-ce \
+#
+# Install Ruby Version Manager (RVM)
+    && apt-add-repository -y ppa:rael-gc/rvm \
+    && apt-get install -y rvm \
+#
+# Install Node Version Manager (NVM)
+    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash \
 #
 # Clean up
     && apt-get autoremove -y \
