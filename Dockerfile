@@ -5,14 +5,22 @@ RUN apt-get update \
     && apt-get install -y \
       build-essential \
       curl \
+      dnsutils \
       git \
+      iputils-ping \
+      iputils-tracepath \
       liblzma-dev \
       mysql-client \
+      net-tools \
       patch \
       postgresql-client \
+      tcpdump \
+      tcptrace \
       tmux \
+      traceroute \
       vim \
       wget \
+      whois \
       zlib1g-dev \
 #
 # Install Digital Ocean control tools
