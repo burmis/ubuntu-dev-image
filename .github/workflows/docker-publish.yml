@@ -12,6 +12,10 @@ on:
 
   # Run tests for any PRs.
   pull_request:
+  
+  # Run this workflow ever Saturday at 10:00am
+  schedule:
+    - cron: 0 10 * * 6
 
 env:
   IMAGE_NAME: burmis-ubuntu-dev
