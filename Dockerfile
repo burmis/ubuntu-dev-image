@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 
+# Prevent install prompts, without persisting env
 ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
