@@ -78,7 +78,7 @@ RUN apt-get update \
     && apt-get install -y rvm \
 #
 # Install Node Version Manager (NVM)
-    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash \
+    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash \
 #
 # Clean up
     && apt-get autoremove -y \
